@@ -1,7 +1,7 @@
 import express, { Router, NextFunction, Response, Request } from 'express';
 import cors from 'cors';
 import ErrorHandle from "@middleware/error-handle";
-import AdminRoute from 'routes/index';
+import AdminRoute from 'routes/admin/index';
 
 export interface Route {
   path: string;

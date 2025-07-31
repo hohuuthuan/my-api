@@ -13,7 +13,7 @@ export interface IDetailParams {
 
 export interface IUpdateBody {
   username: string;
-  password?: string;
+  password: string;
   fullname: string;
 }
 

@@ -12,6 +12,7 @@
       "@config/*": ["config/*"],
       "@model/*": ["model/*"],
       "@controller/*": ["controller/*"],
+      "@request/*": ["request/*"],
       "@middleware/*": ["middleware/*"],
       "@router/*": ["router/*"],
       "@service/*": ["service/*"],
