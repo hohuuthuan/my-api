@@ -1,12 +1,16 @@
 import 'dotenv/config';
-import express from 'express';
+import * as process from "node:process";
+// import apm from 'elastic-apm-node';
+
+// apm.start({
+//   serviceName: 'my-api',
+//   spanStackTraceMinDuration: '50ms',
+//   transactionSampleRate: 1.0,
+//   serverUrl: process.env.ELASTIC_APM_SERVER_URL ?? '',
+//   environment: process.env.NODE_ENV ?? 'development',
+//   logLevel: 'error',
+//   active: ['production', 'staging', 'development'].includes(process.env.NODE_ENV ?? '')
+// });
+
 import '@config/postgres';
-
-const app = express();
-
-console.log('===============================');
-console.log(`======= ENV: ${process.env.NODE_ENV} =======`);
-console.log(`🚀 App listening on port ${process.env.PORT}`);
-console.log('===============================');
-
-app.listen(Number(process.env.PORT || 3000));
+import './app';

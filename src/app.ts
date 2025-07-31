@@ -1,7 +1,7 @@
 import express, { Router, NextFunction, Response, Request } from 'express';
 import cors from 'cors';
-import ErrorHandle from '@middlewares/error-handle';
-import AdminRouter from "@routes/index";
+import ErrorHandle from "@middleware/error-handle";
+import AdminRoute from 'routes/index';
 
 export interface Route {
   path: string;
@@ -64,7 +64,7 @@ class App {
 }
 
 const app = new App([
-  new AdminRouter()
+  new AdminRoute()
 ]);
 
 app.listen();

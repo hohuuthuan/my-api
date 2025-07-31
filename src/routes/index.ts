@@ -1,21 +1,20 @@
 import { Router } from 'express';
+import { Route } from '../app';
 
-export default class AdminRoute {
+import AdminController from '@controller/admin/admin';
+
+export default class AdminRoute implements Route {
   public path = '/admin';
   public router = Router();
   public middlewares = [];
 
   constructor() {
-    this.initializeRoutes();
+    this.router.use('/', this.Admin());
   }
 
-  private initializeRoutes() {
-    this.router.get('/', (req, res) => {
-      res.json({ message: 'Welcome to panel' });
-    });
-
-    this.router.get('/about', (req, res) => {
-      res.json({ message: 'About Panel' });
-    });
+  private Admin() {
+    const router = Router();
+    router.get('/', AdminController.List);
+    return router;
   }
 }

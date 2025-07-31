@@ -10,12 +10,12 @@
     "baseUrl": "./src",
     "paths": {
       "@config/*": ["config/*"],
-      "@model/*": ["models/*"],
-      "@controller/*": ["controllers/*"],
-      "@middlewares/*": ["middlewares/*"],
-      "@routes/*": ["routes/*"],
-      "@services/*": ["services/*"],
-      "@utils/*": ["utils/*"],
+      "@model/*": ["model/*"],
+      "@controller/*": ["controller/*"],
+      "@middleware/*": ["middleware/*"],
+      "@router/*": ["router/*"],
+      "@service/*": ["service/*"],
+      "@util/*": ["util/*"],
     }
   },
   "include": ["src"],
