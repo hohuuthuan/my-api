@@ -29,9 +29,14 @@ sequelize.authenticate().then(() => {
 
 Modals(sequelize);
 
-// sequelize.sync({ force: false, alter: true }).then(() => {
-//   console.log('=-=- Sync DB Success -=-=');
-// });
+// sequelize
+// 	.sync({
+// 		force: false,
+// 		alter: true
+// 	})
+// 	.then(function() {
+// 		console.log('=-=- Sync DB Success -=-=');
+// 	});
 
 export default {
   sequelize,
